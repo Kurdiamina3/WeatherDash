@@ -46,7 +46,7 @@ var displayWeather = function(weather, searchCity){
   citySearchInputEl.textContent = searchCity;
 
   var currentDate = document.createElement("span")
-  currentDate.textContent =" (" + moment(weather.dt.value).format("MM D, YYY") + ") ";
+  currentDate.textContent =" (" + moment(weather.dt.value).format("MM D, YYYY") + ") ";
   citySearchInputEl.appendChild(currentDate);
 
   var weatherIcon = document.createElement("img")
@@ -151,7 +151,10 @@ var display5Day = function(weather){
     forecastHumEl.classList = "card0body text-center";
     forecastHumEl.textContent = dailyForecast.main.humidity + " %";
 
+
     forecastEl.appendChild(forecastHumEl);
+
+      forecastContainerEl.appendChild(forecastEl)
 
     }
 }
